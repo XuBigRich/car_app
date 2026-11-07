@@ -37,14 +37,16 @@ public final class RemoteActivity extends Activity {
         controls.setMotionEventSplittingEnabled(true);
         root.addView(controls, new LinearLayout.LayoutParams(-1, 0, 1));
 
+        LinearLayout throttle = panel(controls, "行走", 1.2f);
+        LinearLayout center = panel(controls, "油门上限", 1f);
         LinearLayout steering = panel(controls, "转向", 1.2f);
+
         LinearLayout arrows = new LinearLayout(this);
         arrows.setMotionEventSplittingEnabled(true);
         steering.addView(arrows, new LinearLayout.LayoutParams(-1, 0, 1));
         hold(arrows, "◀ 左转", 'l');
         hold(arrows, "右转 ▶", 'r');
 
-        LinearLayout center = panel(controls, "油门上限", 1f);
         SeekBar slider = new SeekBar(this);
         slider.setMax(100);
         slider.setProgress(speed);
@@ -61,7 +63,6 @@ public final class RemoteActivity extends Activity {
         hold(center, "按住刹车", 'x');
         button(center, "停止", this::stop);
 
-        LinearLayout throttle = panel(controls, "行走", 1.2f);
         hold(throttle, "▲ 前进", 'f');
         hold(throttle, "▼ 倒车", 'b');
         setContentView(root);
