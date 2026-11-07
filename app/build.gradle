@@ -1,0 +1,13 @@
+plugins { id 'com.android.application' version '9.1.1' }
+android {
+    namespace 'local.car'
+    compileSdk 36
+    defaultConfig {
+        applicationId 'local.car'
+        minSdk 23
+        targetSdk 34
+        versionCode 1
+        versionName '1.0'
+    }
+}
+
