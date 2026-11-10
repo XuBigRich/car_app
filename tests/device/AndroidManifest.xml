@@ -1,0 +1,6 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="local.car.tests">
+  <application android:label="Car persistence tests" />
+  <instrumentation android:name="local.car.SkillStoreInstrumentation" android:targetPackage="local.car" />
+  <instrumentation android:name="local.car.ControlStabilityInstrumentation" android:targetPackage="local.car" />
+  <instrumentation android:name="local.car.BoardWireInstrumentation" android:targetPackage="local.car" />
+</manifest>
